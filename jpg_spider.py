@@ -23,8 +23,6 @@ class GetPicDownload:
     def get_pic_url(self, url):
         """
         获取目标URL可下载列表
-        :param url:
-        :return:
         """
         if re.search(r'http://|https://', str(url)):
             if len(re.split(r'://|/', str(url))) == 2:
@@ -52,8 +50,6 @@ class GetPicDownload:
     def download_pic(self, url):
         """
         调用线程池去执行_get_pic方法下载
-        :param url:
-        :return:
         """
         pic_lists = self.get_pic_url(url)
         if pic_lists:
